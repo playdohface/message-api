@@ -1,14 +1,15 @@
 use rocket::form::Form;
 use rocket::fs::NamedFile;
 use std::path::{Path, PathBuf};
-use std::env;
+use std::{fs, env};
+
 
 #[macro_use]
 extern crate rocket;
 
 #[get("/")]
 fn index() -> String {
-    env::current_dir().unwrap().to_str().unwrap().to_string()
+    listcurrentdir()
     //"Hello, let's test this even more.".to_string()
 }
 
@@ -23,7 +24,15 @@ async fn files(file: PathBuf) -> Option<NamedFile> {
 }
 
 
-
+fn listcurrentdir() -> String {
+    let mut  output = String::new();
+     for file in fs::read_dir(env::current_dir().unwrap()).unwrap() {
+         //println!("{}", );
+         output += &file.unwrap().path().display().to_string();
+         output += "   ";
+    }
+    output
+}
 
 #[derive(FromForm)]
 struct Msg<'r> {
