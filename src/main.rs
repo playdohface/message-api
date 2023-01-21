@@ -1,13 +1,15 @@
 use rocket::form::Form;
 use rocket::fs::NamedFile;
 use std::path::{Path, PathBuf};
+use std::env;
 
 #[macro_use]
 extern crate rocket;
 
 #[get("/")]
 fn index() -> String {
-    "Hello, let's test this even more.".to_string()
+    env::current_dir().unwrap().to_str().unwrap().to_string()
+    //"Hello, let's test this even more.".to_string()
 }
 
 #[get("/hello")]
