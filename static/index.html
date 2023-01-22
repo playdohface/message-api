@@ -2,13 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Let's serve some Files!</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Karl-Erik Enkelmann Dev Profile</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>This is a file indeed!</h1>
-	<script src="index.js"></script>
+    <div id="topbar">
+    <div id="topright">
+      <h1>Karl-Erik Enkelmann</h1>
+      <h2>Developer Profile</h2>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+    <div id="content">
+      <button onclick="run_intro('typebox')">Run!</button>
+      <div id="typebox"></div>
+      <div class="section" id="projects">
+        <h1>Projects</h1>
+        <div class="project"><h2>PolyMetronome</h2>
+          <p>An app built with Angular and the Web Audio API that helps musicians practice polyrhythms and timing. Also available as a native mobile app. </p>
+        <p><a href="https://github.com/playdohface/metronome">Source Code</a> | <a href="https://playdohface.github.io/metronome/">Live Version</a></p></div>
+      </div>
+      <div class="project"><h2>Tic Tac Toe</h2>
+        <p>A completely overengineered version of the classic game of Tic Tac Toe. This one features an AI with 5 levels of difficulty, and runs in the browser via WebAssembly.</p></div>
+    </div>
+      <div class="section" id="about">
+        <h1>About me</h1>
+        <p>I am a web developer based in Brühl, Germany. My favorite language is currently Rust, but I also work in TypeScript/JavaScript, Python and whatever else gets the job done. My greatest passion in life is learning.</p>
+      </div>
+      <div class="section" id="contact">
+        <h1>Contact</h1>
+        <div class="container">
+          <form>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <button onclick="sendMessage(this.form)">Submit Form</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <script src="index.js"></script>
   </body>
 </html>

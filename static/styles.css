@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root, :root.dark {
+    /* CSS HSL */
+--main-bg: hsla(230, 8%, 15%, 1);
+--bg-darker: hsla(230, 8%, 10%, 1);
+--main-text: hsla(9, 4%, 85%, 1);
+--highlight: hsla(16, 100%, 45%, 1);
+--stringlit: green; 
+}
+
+body {
+
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    color: var(--highlight);
+}
+
+#topright {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+#topright h1 {
+    margin: 0;
+}
+#topright h2 {
+    margin-top: -10px;
+    font-weight: 400;
+    font-size: 18px;
+}
+#menu {
+    
+}
+
+#menu ul {
+    margin-top: 5px;
+    list-style: none;
+  /*  display: flex;
+    flex-wrap: wrap; */
+    text-align: right;
+    
+
+}
+
+#menu li {
+    margin-left: 10px;
+    float: right;
+    clear: right;
+    font-size: 18px;
+}
+
+#menu a {
+    text-decoration: none;
+    display:block;
+    padding: 5px;
+}
+#menu a:hover {
+    background-color: var(--bg-darker);
+}
+
+#topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#content {
+    margin-top: 0px;
+}
+
+#typebox {
+    font-size: 2em;
+}
+
+/*Styles for the Splash screen intro */
+#cursorwrap {
+    position: relative;
+}
+#cursor::after {
+    position: absolute;
+    content: "|";
+    right: -5px;
+    animation: blink-animation 1s steps(2, start) infinite;
+    -webkit-animation: blink-animation 1s steps(2, start) infinite;    
+}
+.stringlit {
+    color: var(--stringlit);
+}
+.keyword {
+    color: var(--highlight);
+}
+#typebox {
+    background-color: var(--bg-darker);
+    font-family: 'Fira Code', monospace;
+}
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+
+
