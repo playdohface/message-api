@@ -7,19 +7,82 @@
 --main-bg: hsla(230, 8%, 15%, 1);
 --bg-darker: hsla(230, 8%, 10%, 1);
 --main-text: hsla(9, 4%, 85%, 1);
+--main-text-darker: hsla(9, 4%, 60%, 1);
 --highlight: hsla(16, 100%, 45%, 1);
 --stringlit: green; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 
-    background-color: var(--main-bg);
+    background-color: var(--bg-darker);
     color: var(--main-text);
     font-family: 'Fira Sans', sans-serif;
+    padding: 0;
 }
 
 a {
     color: var(--highlight);
+}
+
+
+input, textarea {
+    width: 97%;
+    background-color: var(--bg-darker);
+    color: var(--main-text);
+    border: 1px solid var(--main-text-darker);
+    margin: 5px;
+    padding: 10px;
+}
+
+#projects {
+    
+}
+
+.projectgrid {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+ /*   grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 20px 20px; */ 
+
+}
+
+.project {
+    background-color: var(--bg-darker);
+    border-radius: 10px;
+padding: 15px;
+margin: 0;
+margin-bottom: 30px;
+width: 455px;
+}
+
+.section {
+    margin-top: 50px;
+}
+#contact button {
+    margin: 5px;
+    padding: 10px;
+    background-color: var(--bg-darker);
+    color: var(--main-text);
+    border: 1px solid var(--main-text-darker);
+    width: 200px;
+    font-family: 'Fira Sans', sans-serif;
+    border-radius: 5px;
+
+}
+
+#outerwrap {
+    max-width: 1000px;
+    padding: 30px;
+    margin:auto;
+    margin-top: 0;
+    background-color: var(--main-bg);
 }
 
 #topright {
@@ -29,11 +92,13 @@ a {
 }
 #topright h1 {
     margin: 0;
+    
 }
 #topright h2 {
     margin-top: -10px;
     font-weight: 400;
     font-size: 18px;
+    color: var(--main-text-darker);
 }
 #menu {
     
@@ -66,16 +131,20 @@ a {
 }
 
 #topbar {
+    position:relative;
+    background-color: var(--main-bg);
     display: flex;
     justify-content: space-between;
 }
 
 #content {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 #typebox {
-    font-size: 2em;
+    min-height: 350px;
+    font-size: 1.5em;
+    padding: 15px;
 }
 
 /*Styles for the Splash screen intro */

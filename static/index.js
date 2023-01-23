@@ -144,5 +144,12 @@ function run_intro(containerId) {
     .then(cursor => typeAt(cursor+34, "'"))
     .then(cursor => wrapInTag(cursor-36, cursor, '<span class="stringlit">', '</span>'))
     .then(cursor => typeAt(cursor,");"))
-    .then(cursor => box.innerHTML = box.innerHTML + '</br>}')    
+    .then(cursor => { 
+        box.innerHTML = box.innerHTML + '</br>}'
+        return box.innerHTML.length;
+    
+    }).then(cursor => pause(1000, cursor))
+    .then(cursor => {
+        box.innerHTML = box.innerHTML + '</br></br>I like to build things. </br>I like to learn things. </br>I like to code things. </br>I like to improve things.';
+    })    
 }
