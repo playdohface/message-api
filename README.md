@@ -1,3 +1,2 @@
-# Message API
-A simple API built with Rocket that helps me receive messages.
-Very much work in progress!
+# Rust backend
+The backend and web assets for my personal website.

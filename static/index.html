@@ -22,17 +22,17 @@
     </div>
   </div>
     <div id="content">
-      <button onclick="run_intro('typebox')">Run!</button>
+      <!-- <button onclick="run_intro('typebox')">Run!</button> -->
       <div id="typebox"></div>
       <div class="section" id="projects">
         <h1>Projects</h1>
         <div class="projectgrid">
         <div class="project" id="polymetronome"><h2>PolyMetronome</h2>
-          <p>An app built with Angular and the Web Audio API that helps musicians practice polyrhythms and timing. Also available as a native mobile app. </p>
+          <p>An app built with Angular and the Web Audio API that helps musicians practice polyrhythms and timing. There is a <a href="https://github.com/playdohface/polymetronome-mobile">native mobile app</a> under way, too.</p>
         <p><a href="https://github.com/playdohface/metronome">Source Code</a> | <a href="https://playdohface.github.io/metronome/">Live Version</a></p></div>
         <div class="project" id="rustserver"><h2>Rust Server</h2>
           <p>The website you are looking at is being served by a handcrafted backend written in Rust using the Rocket framework. It packages the assets into a binary and serves them ultra-efficiently. It also takes care of relaying messages to me without exposing my email to the depths of the web.</p>
-          <p><a href="https://github.com/playdohface/message-api">Source Code</a> | Live Version (you are looking at it)</p>
+          <p><a href="https://github.com/playdohface/message-api">Source Code</a></p>
         
       </div>
       <div class="project" id="tictactoe"><h2>Tic Tac Toe</h2>
@@ -43,11 +43,13 @@
   </div>
       <div class="section" id="about">
         <h1>About me</h1>
-        <p>I am a web developer based in Brühl, Germany. My favorite language is currently Rust, but I also work in TypeScript/JavaScript, Python and whatever else gets the job done. My greatest passion in life is learning.</p>
+        <p>I am a web developer based in the Cologne-Bonn area in Germany. I'm currently looking for opportunities to work and learn within a motivated team and on challenging projects. 
+          My favorite programming language is currently Rust, but I also like and use TypeScript and Python, and as an Emacs user have a soft spot in my heart for Lisp. I am always learning new things, if it's not about web technologies then natural languages and music.  </p>
       </div>
       <div class="section" id="contact">
         <h1>Contact</h1>
-        <div class="container">
+        <p>You can contact me via the below form. Please make sure to add the correct contact details, otherwise I can not reply.</p>
+        <div id="contactcontainer">
           <form>
             <div class="form-group">
               <div class="form-row">
@@ -62,7 +64,7 @@
             <div class="form-group">
               <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
             </div>
-            <button onclick="sendMessage(this.form)">Send Message</button>
+            <button id="sendmessage" onclick="sendMessage(this.form)">Send Message</button>
           </form>
         </div>
       </div>

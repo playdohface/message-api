@@ -141,11 +141,16 @@ width: 455px;
     margin-top: 0;
 }
 
-#typebox {
+#typebox, #contactresponse {
     min-height: 350px;
     font-size: 1.5em;
     padding: 15px;
+    margin-top: 20px;
+    background-color: var(--bg-darker);
+    font-family: 'Fira Code', monospace;
 }
+
+
 
 /*Styles for the Splash screen intro */
 #cursorwrap {
@@ -164,10 +169,7 @@ width: 455px;
 .keyword {
     color: var(--highlight);
 }
-#typebox {
-    background-color: var(--bg-darker);
-    font-family: 'Fira Code', monospace;
-}
+
 @keyframes blink-animation {
     to {
       visibility: hidden;
