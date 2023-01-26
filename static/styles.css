@@ -8,8 +8,8 @@
 --bg-darker: hsla(230, 8%, 10%, 1);
 --main-text: hsla(9, 4%, 85%, 1);
 --main-text-darker: hsla(9, 4%, 60%, 1);
---highlight: hsla(16, 100%, 45%, 1);
---stringlit: green; 
+--highlight: hsla(200, 100%, 45%, 1);
+--stringlit: rgb(255, 147, 31);
 }
 
 html {
