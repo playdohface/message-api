@@ -18,7 +18,7 @@ pub fn simplemail(replyto: String, name: String, message: String ) -> Result<Res
         .body(format!("From: {} <{}> , Message: {}", name, replyto, message))
         .unwrap();
 
-    let mailer = SmtpTransport::relay("smtp.gmail.com")
+    let mailer = SmtpTransport::relay("smtp.ionos.de")
         .unwrap()
         .credentials(creds)
         .build();

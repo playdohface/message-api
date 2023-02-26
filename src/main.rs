@@ -1,8 +1,8 @@
 use email::simplemail;
-use rocket::form::Form;
-use rocket::fs::NamedFile;
-use std::path::{Path, PathBuf};
-use std::{fs, env};
+
+
+use std::path::{PathBuf};
+
 use rocket::http::ContentType;
 use rocket::response::content::RawHtml;
 use rust_embed::RustEmbed;

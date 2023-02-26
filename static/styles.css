@@ -38,9 +38,6 @@ input, textarea {
     padding: 10px;
 }
 
-#projects {
-    
-}
 
 .projectgrid {
     display: flex; 
@@ -99,9 +96,6 @@ width: 455px;
     font-weight: 400;
     font-size: 18px;
     color: var(--main-text-darker);
-}
-#menu {
-    
 }
 
 #menu ul {
