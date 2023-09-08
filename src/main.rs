@@ -47,9 +47,7 @@ fn servestatic(file: PathBuf) -> Option<(ContentType, Cow<'static, [u8]>)> {
 
 #[get("/pitch")]
 fn pitch() -> String {
-    "Look, 140 characters to stand out from the crowd? I am afraid 140 characters doesn't even cover my tech stack. \n
-I might not have a Tech degree, but I've got a pretty good idea of how the web works, and how to build things that make it work better with a variety of tools.\n
-Not that I'm not always learning more tools. Just give me a chance to prove it to you, you've got my CV, and you can reach me via \n\nmail@karlerikenkelmann.com\n\n any time. I trust you can even find my website :) \n".into()
+    "Look, 140 characters to stand out from the crowd? I am afraid 140 characters doesn't even cover my tech stack. \nHonestly though, I might not have a tech degree, but I've got a pretty good idea of how the web works, and how to build things that make it work better with a variety of tools.\nNot that I'm not always learning more tools. Just give me a chance to prove it to you, you've got my CV, and you can reach me via mail@karlerikenkelmann.com any time. I trust you can even find my website :) \n".into()
 }
 
 #[derive(Deserialize, Debug)]
